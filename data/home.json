@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "sezione" : "tecnologie",
+        "data": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Chart.js",
+            "Flask",
+            "Python",
+            "Jinja",
+            "SQLite",
+            "API"
+        ]
+    }
+]
