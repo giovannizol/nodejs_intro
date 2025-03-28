@@ -1,0 +1,14 @@
+{
+  "name": "betto_server",
+  "version": "1.0.0",
+  "description": "esempio di server",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giovanni Zol <giovanni.zol.24@stud.itsaltoadriatico.it>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
