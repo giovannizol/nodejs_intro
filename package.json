@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch src/index.js"
+    "start": "node --watch src/index.js",
+    "qrcode": "node src/qrcode.js"
   },
   "author": "Giovanni Zol <giovanni.zol.24@stud.itsaltoadriatico.it>",
   "license": "ISC",
