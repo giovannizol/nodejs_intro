@@ -1,0 +1,25 @@
+GET http://localhost:3001/timeline
+
+###
+
+GET http://localhost:3001/timeline/3
+
+###
+
+GET http://localhost:3001/timeline/3000
+
+###
+
+POST http://localhost:3001/timeline
+
+###
+
+PUT http://localhost:3001/timeline/2
+
+###
+
+PATCH http://localhost:3001/timeline/1
+
+###
+
+DELETE http://localhost:3001/timeline/2
