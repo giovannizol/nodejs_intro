@@ -28,27 +28,35 @@ server.get('/timeline/:id', (req, res) => {
 server.post('/timeline', (req, res) => {
     const dataTimeline=require("../data/notizie.json")
     console.log("POST ok");
-    res.send(dataTimeline);
+    res.status(201).send(dataTimeline);
 })
 
 // PUT /timeline/:id
 server.put('/timeline/:id', (req, res) => {
     const dataTimeline=require("../data/notizie.json")
     console.log(`PUT ok in ${req.params.id}`); 
-    res.send(dataTimeline);
+    res.status(200).send(dataTimeline);
+
 })
 
 // PATCH /timeline/:id
 server.patch('/timeline/:id', (req, res) => {
     const dataTimeline=require("../data/notizie.json")
     console.log(`PATCH ok in ${req.params.id}`); 
-    res.send(dataTimeline);
+    res.status(200).send(dataTimeline);
+
 })
 
 // DELETE /timeline/:id
 server.delete('/timeline/:id', (req, res) => {
     const dataTimeline=require("../data/notizie.json")
     console.log(`DELETE ok in ${req.params.id}`); 
-    res.send(dataTimeline);
+    res.status(204).send();
+
 })
+
+
+server.listen(port, () => {
+    console.log('server :3001 in ascolto!')
+  })
 

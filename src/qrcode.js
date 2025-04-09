@@ -11,5 +11,5 @@ qrcode.toDataURL('Hello World', (err, qrstring) => {
 })
 
 qrcode.toFile('data/qrcode.png', 'Hello world', {
-    errorCorrectionLevel: 'L'
+    errorCorrectionLevel: 'H'
 })

@@ -4,5 +4,22 @@
         "titolo" : "prova",
         "testo" : "testo notizia",
         "data" : "2025-03-28"
+    },
+
+    {
+        "id": 2,
+        "year": 2025,
+        "company": "ACME",
+        "role": "Sviluppatore Junior",
+        "description": "Lorem ipsum dolor sit amet, in Lorem duis veniam laborum ipsum nulla proident",
+        "link": "https://google.com"
+    },
+    {
+        "id": 3,
+        "year": 2024,
+        "company": "SIGMA",
+        "role": "Sviluppatore Senior",
+        "description": "Lorem ipsum dolor sit amet, in Lorem duis veniam laborum ipsum nulla proident",
+        "link": "https://google.com"
     }
 ]

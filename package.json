@@ -8,6 +8,7 @@
     "start": "node --watch src/index.js",
     "server": "node --watch src/server.js",
     "database": "node src/database.js",
+    "frontend": "serve -l 4000 public/index.html",
     "qrcode": "node src/qrcode.js",
     "startqr": "npm run qrcode && npm run start"
   },
