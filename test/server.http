@@ -1,25 +1,52 @@
-GET http://localhost:3001/timeline
+GET http://localhost:3001/notizie
 
 ###
 
-GET http://localhost:3001/timeline/3
+GET http://localhost:3001/notizie/5
 
 ###
 
-GET http://localhost:3001/timeline/3000
+GET http://localhost:3001/notizie/3000
 
 ###
 
-POST http://localhost:3001/timeline
+POST http://localhost:3001/notizie
+Content-Type: application/json
+
+{
+    "titolo" : "prova",
+    "testo" : "testo notizia",
+    "data" : "2025-03-21",
+    "autore" : "Mario Rossi"
+}
 
 ###
 
-PUT http://localhost:3001/timeline/2
+PUT http://localhost:3001/notizie/6
+Content-Type: application/json
+
+{
+    
+    "titolo" : "prova",
+    "testo" : "testo notizia",
+    "data" : "2025-03-28",
+    "autore": "Paolo Bianchi"
+}
 
 ###
 
-PATCH http://localhost:3001/timeline/1
+PATCH http://localhost:3001/notizie/1
+Content-Type: application/json
+
+{
+    "titolo": "PATCH",
+    "testo": "patch applicata cambiando testo e titolo"
+}
 
 ###
 
-DELETE http://localhost:3001/timeline/2
+DELETE http://localhost:3001/notizie
+
+###
+
+DELETE http://localhost:3001/notizie/4

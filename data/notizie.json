@@ -3,23 +3,21 @@
         "id" : 1,
         "titolo" : "prova",
         "testo" : "testo notizia",
-        "data" : "2025-03-28"
-    },
-
-    {
-        "id": 2,
-        "year": 2025,
-        "company": "ACME",
-        "role": "Sviluppatore Junior",
-        "description": "Lorem ipsum dolor sit amet, in Lorem duis veniam laborum ipsum nulla proident",
-        "link": "https://google.com"
+        "data" : "2025-03-28",
+        "autore" : "Luca Verdi"
     },
     {
-        "id": 3,
-        "year": 2024,
-        "company": "SIGMA",
-        "role": "Sviluppatore Senior",
-        "description": "Lorem ipsum dolor sit amet, in Lorem duis veniam laborum ipsum nulla proident",
-        "link": "https://google.com"
+        "id" : 2,
+        "titolo" : "mercati in rosso",
+        "testo" : "altra brutta giornata a WS",
+        "data" : "2025-03-29",
+        "autore" : "Luca Verdi"
+    },
+    {
+        "id" : 3,
+        "titolo" : "mercati in ripresa",
+        "testo" : "S&P500 + 5% intraday",
+        "data" : "2025-04-01",
+        "autore" : "Jp Morgan"
     }
 ]
