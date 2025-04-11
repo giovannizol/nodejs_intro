@@ -10,7 +10,21 @@ const { message } = require('telegraf/filters')
 
 console.log("process.env: ", process.env)
 const bot = new Telegraf(process.env.BOT_TOKEN)
+
 bot.start((ctx) => ctx.reply('Welcome'))
+
+bot.on('message', (ctx, next) => {
+    const photoArray = ctx.message.photo;
+
+    if (!photoArray) {
+        next();
+    }
+
+    const largestPhoto = photoArray[photoArray.length - 1];
+
+    console.log(largestPhoto);
+})
+
 bot.help((ctx) => ctx.reply('Send me a sticker'))
 bot.on(message('sticker'), (ctx) => ctx.reply('👍'))
 bot.hears('hi', (ctx) => {
