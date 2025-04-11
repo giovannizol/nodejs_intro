@@ -15,8 +15,10 @@
   "author": "Giovanni Zol <giovanni.zol.24@stud.itsaltoadriatico.it>",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^4.21.2",
     "qrcode": "^1.5.4",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "telegraf": "^4.16.3"
   }
 }

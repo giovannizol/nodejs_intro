@@ -1,5 +1,23 @@
+const dotenv = require('dotenv');
+dotenv.config();
+dotenv.config({path: '.env.local', override: true});
+
 // carico il modulo express
 const express = require('express');
+
+const { Telegraf } = require('telegraf')
+const { message } = require('telegraf/filters')
+
+console.log("process.env: ", process.env)
+const bot = new Telegraf(process.env.BOT_TOKEN)
+bot.start((ctx) => ctx.reply('Welcome'))
+bot.help((ctx) => ctx.reply('Send me a sticker'))
+bot.on(message('sticker'), (ctx) => ctx.reply('👍'))
+bot.hears('hi', (ctx) => {
+    console.log(ctx.update.message.chat);
+    ctx.reply('Hey there')
+})
+bot.launch()
 
 // carico il modulo per sqlite
 const sqlite3 = require('sqlite3').verbose();
@@ -13,6 +31,19 @@ const server = express();
 
 // indico che voglio decodificare i contenuti che ricevo come JSON
 server.use(express.json());
+
+
+// nuovo endpoint per il contatto
+// deve gestire correttamente il metodo
+// mostra in console il contenuto, il corpo del messaggio
+// risponde con solo ok
+
+server.post('/contact', (req, res) => {
+    console.log(req.body)
+    bot.telegram.sendMessage(process.env.BOT_CHAT_ID, `Contatto\nNome: ${req.body.nome}\nEmail: ${req.body.email}\n\nTesto: ${req.body.testo}`)
+    res.send('ok')
+})
+
 
 // creo la tabella nel database se già non esiste
 db.serialize(() => {
@@ -58,7 +89,8 @@ server.get('/notizie/:id', (req, res) => {
                 .send(row);
         }
     )
-});
+}); 
+
 
 // rispondo con "ok POST" alle chiamate con metodo "POST" che ricevo su "/notizie"
 server.post('/notizie', (req, res) => {

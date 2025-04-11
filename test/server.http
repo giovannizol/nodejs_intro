@@ -22,7 +22,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3001/notizie/6
+PUT http://localhost:3001/notizie/3
 Content-Type: application/json
 
 {
